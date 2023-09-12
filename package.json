@@ -16,6 +16,52 @@
       {
         "command": "vs-codingame.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "vs-codingame.openCodingame",
+        "title": "Open CodinGame"
+      }
+    ],
+    "configuration": [
+      {
+        "title": "VS CodinGame",
+        "properties": {
+          "vs-codingame.useOneFileForAllPuzzles": {
+            "type": "boolean",
+            "default": false
+          },
+          "vs-codingame.autoPlay": {
+            "type": "boolean",
+            "default": false
+          },
+          "vs-codingame.enable2WayDataBinding": {
+            "type": "boolean",
+            "default": false
+          },
+          "vs-codingame.defaultFirstAction": {
+            "type": "string",
+            "default": "Download",
+            "enum": [
+              "Download",
+              "Ask me",
+              "Upload"
+            ]
+          }
+        }
+      }
+    ],
+    "views": {
+      "explorer": [
+        {
+          "id": "cgSynchro",
+          "name": "CodinGame Synchronization"
+        }
+      ]
+    },
+    "viewsWelcome": [
+      {
+        "view": "cgSynchro",
+        "contents": "Please connect via the CodinGame IDE\n[Open CodinGame](command:vs-codingame.openCodingame)"
       }
     ]
   },
