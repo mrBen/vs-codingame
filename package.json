@@ -16,10 +16,6 @@
       {
         "command": "vs-codingame.helloWorld",
         "title": "Hello World"
-      },
-      {
-        "command": "vs-codingame.openCodingame",
-        "title": "Open CodinGame"
       }
     ],
     "configuration": [
@@ -28,23 +24,32 @@
         "properties": {
           "vs-codingame.useOneFileForAllPuzzles": {
             "type": "boolean",
-            "default": false
+            "default": false,
+            "description": "When set to No, the “Previously selected file” will be different for every puzzle. This makes it easier to have a workflow where you use one file per puzzle. If you prefer to use one file for all puzzles, I recommend to set this to Yes."
           },
           "vs-codingame.autoPlay": {
             "type": "boolean",
-            "default": false
+            "default": false,
+            "description": "When set to On, the current puzzle will automatically be played when the local file is changed."
           },
-          "vs-codingame.enable2WayDataBinding": {
+          "vs-codingame.enable 2-wayDataBinding": {
             "type": "boolean",
-            "default": false
+            "default": false,
+            "markdownDescription": "When set to Yes, the CodinGame IDE will not be set to read-only mode so you can still use it. Changes in the CodinGame IDE will simultaneously be reflected in the local file. When #vs-codingame.autoPlay# is also set to `On`, the puzzle will only be automatically played if you manually edit the local file."
           },
           "vs-codingame.defaultFirstAction": {
             "type": "string",
-            "default": "Download",
+            "default": "Ask me",
+            "description": "This specifies what happens when you select a file.",
             "enum": [
               "Download",
               "Ask me",
               "Upload"
+            ],
+            "enumDescriptions": [
+              "When set to Download or Upload, the First Action part after you select a file is skipped.",
+              "When set to Ask me, you will be asked what to do with the selected file every time you select a file.",
+              "When set to Download or Upload, the First Action part after you select a file is skipped."
             ]
           }
         }
