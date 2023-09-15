@@ -14,8 +14,24 @@
   "contributes": {
     "commands": [
       {
-        "command": "vs-codingame.helloWorld",
-        "title": "Hello World"
+        "command": "vs-codingame.openSettings",
+        "title": "Open Settings",
+        "icon": "$(settings-gear)"
+      },
+      {
+        "command": "vs-codingame.changeFile",
+        "title": "Change File",
+        "icon": "$(files)"
+      },
+      {
+        "command": "vs-codingame.downloadIDEToFile",
+        "title": "Download IDE to File",
+        "icon": "$(arrow-down)"
+      },
+      {
+        "command": "vs-codingame.uploadFileToIDE",
+        "title": "Upload File to IDE",
+        "icon": "$(arrow-up)"
       }
     ],
     "configuration": [
@@ -55,6 +71,32 @@
         }
       }
     ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "vs-codingame.changeFile",
+          "when": "view == cgSynchro",
+          "group": "navigation"
+        },
+        {
+          "command": "vs-codingame.openSettings",
+          "when": "view == cgSynchro",
+          "group": "navigation"
+        }
+      ],
+      "view/item/context": [
+        {
+          "command": "vs-codingame.downloadIDEToFile",
+          "when": "view == cgSynchro",
+          "group": "inline"
+        },
+        {
+          "command": "vs-codingame.uploadFileToIDE",
+          "when": "view == cgSynchro",
+          "group": "inline"
+        }
+      ]
+    },
     "views": {
       "explorer": [
         {
