@@ -15,7 +15,7 @@
     "commands": [
       {
         "command": "vs-codingame.openSettings",
-        "title": "Open Settings",
+        "title": "Open VS CodinGame Settings",
         "icon": "$(settings-gear)"
       },
       {
